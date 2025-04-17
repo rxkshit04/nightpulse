@@ -1,4 +1,8 @@
-/__sapper__
-/cypress
-!node_modules
-/node_modules/*
+node_modules
+.git
+.cache
+*.log
+*.md
+.DS_Store
+dist
+build
