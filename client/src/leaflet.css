@@ -1,0 +1,21 @@
+.leaflet-container {
+  width: 100%;
+  height: 100%;
+  background: #ffffff; /* created by rakshit chauhan,MAIT*/
+  border-radius: 12px;
+}
+
+.custom-icon {
+  background: transparent;
+  border: none;
+}
+
+.custom-icon img {
+  width: 30px;
+  height: 30px;
+}
+
+.leaflet-marker-icon.custom-icon {
+  margin: 0;
+  padding: 0;
+}
