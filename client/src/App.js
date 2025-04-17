@@ -62,8 +62,9 @@ function App() {
     alertId: null,
     alertTitle: "",
   });
+  const BASE_URL = process.env.REACT_APP_BASE_URL || "http://localhost:3000"; // Add environment variable
 
-  //  alerts from Firestore
+  // Fetch alerts from Firestore
   const fetchAlerts = async () => {
     try {
       const querySnapshot = await getDocs(collection(db, "alerts"));
@@ -160,7 +161,7 @@ function App() {
     setDeletePopup({ isOpen: false, alertId: null, alertTitle: "" });
   };
 
-  //  icon for alerts
+  // Create icon for alerts
   const createAlertIcon = (category) => {
     const iconUrl = issueIcons[category] || issueIcons["Suspicious Activity"];
     console.log("Creating icon for category:", category, "URL:", iconUrl);
@@ -228,7 +229,7 @@ function App() {
             <MapContainer
               center={[userLocation.lat, userLocation.lng]}
               zoom={13}
-              style={{ height: "500px" }}
+              style={{ height: "500px", width: "90%", margin: "20px auto" }}
               key={`${userLocation.lat}-${userLocation.lng}`}
             >
               <TileLayer
